@@ -1,6 +1,6 @@
 nodes:
   - id: arm_so101_leader
-    path: main.py
+    path: ../dora_arm_so101/main.py
     inputs:
       get_joint: dora/timer/millis/30
     outputs:
@@ -12,7 +12,7 @@ nodes:
       ARM_ROLE: leader
 
   - id: arm_so101_follower
-    path: main.py
+    path: ../dora_arm_so101/main.py
     inputs:
       get_joint: dora/timer/millis/30
       action_joint: arm_so101_leader/joint
@@ -25,7 +25,7 @@ nodes:
       ARM_ROLE: follower
 
   - id: print_joint
-    path: print_joint.py
+    path: ../dora_arm_so101/print_joint.py
     inputs:
       joint: arm_so101_follower/joint
 
